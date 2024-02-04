@@ -1,25 +1,23 @@
-'use client'
+
 import "@styles/globals.css";
 
 import Nav from "@components/Nav";
-// import Provider from "@components/Provider";
-import { SessionProvider } from "next-auth/react";
+import Provider from "@components/Provider";
+// import { SessionProvider } from "next-auth/react";
 
 
-// export const metadata = {
-//   title: "Sharetopia",
-//   description: "Discover & Share AI Prompts",
-//   icons: {
-//     icon: '/assets/images/logo.svg'
-//   }
-// };
+ export const metadata = {
+     title: "Sharetopia",
+     description: "Discover & Share AI Prompts",
+     icons: {
+       icon: '/assets/images/logo.svg'
+     }
+  };
 
 const RootLayout = ({ children,session }) => (
   <html lang='en'>
     <body>
-      {/* <Provider> */}
-        <SessionProvider session={session}> 
-
+      <Provider> 
         <div className='main'>
           <div className='gradient' />
         </div>
@@ -28,8 +26,7 @@ const RootLayout = ({ children,session }) => (
           <Nav />
           {children}
         </main>
-        </SessionProvider>
-      {/* </Provider> */}
+      </Provider> 
     </body>
   </html>
 );
