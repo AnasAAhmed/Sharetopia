@@ -6,13 +6,13 @@ import Nav from "@components/Nav";
 import { SessionProvider } from "next-auth/react";
 
 
-export const metadata = {
-  title: "Sharetopia",
-  description: "Discover & Share AI Prompts",
-  icons: {
-    icon: '/assets/images/logo.svg'
-  }
-};
+// export const metadata = {
+//   title: "Sharetopia",
+//   description: "Discover & Share AI Prompts",
+//   icons: {
+//     icon: '/assets/images/logo.svg'
+//   }
+// };
 
 const RootLayout = ({ children,session }) => (
   <html lang='en'>
