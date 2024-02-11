@@ -11,10 +11,6 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })
   ],
-  session: {
-    jwt: true,
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-  },
   callbacks: {
     async session({ session }) {
       // store the user id from MongoDB to session
